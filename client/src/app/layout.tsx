@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import ProgressBarProvider from "@/components/ProgressBarProvider";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <ProgressBarProvider>
           <Header />
-          <main className="min-h-screen container mt-4 bg-slate-400/10 rounded-lg">
+          <main className="min-h-screen container my-4 py-4 bg-slate-400/10 rounded-lg">
             {children}
           </main>
+          <Footer />
         </ProgressBarProvider>
       </body>
     </html>
